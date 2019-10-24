@@ -65,12 +65,13 @@ def get_matching_images(database_file, min_num_matches, filter_image_dir):
         num_matches = inlier_matches.shape[0]
 
         # Make sure the match comes from the desired directory.
-        if (image_name1.startswith(filter_image_dir)
-                and image_name2.startswith(filter_image_dir)):
-            two_way_matches[image_id1].append((image_id2, num_matches))
-            two_way_matches[image_id2].append((image_id1, num_matches))
+        # if (image_name1.startswith(filter_image_dir)
+                # and image_name2.startswith(filter_image_dir)):
+        two_way_matches[image_id1].append((image_id2, num_matches))
+        two_way_matches[image_id2].append((image_id1, num_matches))
 
     matching_image_pairs = []
+    # print(two_way_matches)
     for image_id, direct_matching_frames in tqdm(two_way_matches.items()):
         image_name = images[image_id]
 

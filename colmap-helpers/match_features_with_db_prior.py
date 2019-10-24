@@ -2,9 +2,10 @@ import argparse
 import os
 from tqdm import tqdm
 
+import sys
+#sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
 from internal import db_matching_images
 from internal import frame_matching
-
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -28,7 +29,6 @@ def parse_args():
 
 def main():
     args = parse_args()
-
     ratio_test_values = [float(v) for v in args.ratio_test_values.split(',')]
     print('Ratio test values to use:', ratio_test_values)
     outfiles = [open('matches{}.txt'.format(x), 'w+')

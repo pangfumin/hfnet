@@ -59,8 +59,8 @@ def match_frames(path_npz1, path_npz2, path_image1, path_image2, num_points,
     assert np.all(np.sort(frame1['scores'])[::-1] == frame1['scores'])
 
     # WARNING: scores are not taken into account as of now.
-    des1 = frame1['descriptors'].astype('float32')[:num_points]
-    des2 = frame2['descriptors'].astype('float32')[:num_points]
+    des1 = frame1['local_descriptors'].astype('float32')[:num_points]
+    des2 = frame2['local_descriptors'].astype('float32')[:num_points]
 
     if use_ratio_test:
         keypoint_matches = [[] for _ in ratio_test_values]
