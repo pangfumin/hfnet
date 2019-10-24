@@ -9,6 +9,7 @@ colmap point_triangulator \
  --image_path ~/colmap_ws3/images/ \
  --input_path ~/colmap_ws3/longtest/initial_model \
  --output_path ~/colmap_ws3/longtest/sparse 
+
 #step4: use exportFeature.ipynb to  export feature 
 
 #step5: transform .npz feature to .txt format and export them to colmap directory
@@ -36,7 +37,7 @@ colmap feature_importer \
 --import_path ~/colmap_ws3/images/
 
 
-#step9: use indoorContestTool.ipynb to update database
+#step9: use updateDb.ipynb to update database
 
 
 #step10: import match to database
@@ -53,3 +54,7 @@ colmap point_triangulator \
  --image_path ~/colmap_ws3/images/ \
  --input_path ~/colmap_ws3/longtest/hfnet/initial_model \
  --output_path ~/colmap_ws3/longtest/hfnet/sparse 
+
+#step12 export hfnet colmap model as .txt model
+
+#(localization)step13 use indoorContestTool.ipynb to localization
