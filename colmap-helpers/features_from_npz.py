@@ -20,7 +20,7 @@ def export_features_from_npz(filename, in_path, out_path):
 
     filename = os.path.splitext(os.path.basename(path_file))[0]
 
-    out_path_and_name = os.path.join(out_path, filename) + '.png.txt'
+    out_path_and_name = os.path.join(out_path, filename) + '.JPG.txt'
     outfile = open(out_path_and_name, 'w+')
 
     SIFT_SIZE = 128

@@ -41,6 +41,7 @@ python3 colmap-helpers/match_features_with_db_prior.py \
  --database_file ~/colmap_ws3/longtest/d.db 
 
 # This will write info into .db file.
+# This will generate match files on ratio 0.8,0.75,0.7,0.65
 
 #step7: create new colmap database to restore hfnet model
 colmap database_creator --database_path ~/colmap_ws3/longtest/hfnet/d.db
