@@ -52,13 +52,17 @@ colmap matches_importer \
 --SiftMatching.max_num_trials 20000 \
 --SiftMatching.min_inlier_ratio 0.20
 
-#step9: generate sfm model 
+#step9: clear original colmap result, cause we only use images.txt
+python clear_initial_model.py
+ --model_path  ~/colmap_ws3/longtest/
+
+#step10: generate sfm model 
 colmap point_triangulator \
 --database_path ~/colmap_ws3/longtest/hfnet/d.db\
  --image_path ~/colmap_ws3/images/ \
  --input_path ~/colmap_ws3/longtest/initial_model \
  --output_path ~/colmap_ws3/longtest/hfnet/sparse 
 
-#step10 load colmap model and export hfnet colmap model as .txt model
+#step11 load colmap model and export hfnet colmap model as .txt model
 # export button incolmap GUI.
 
