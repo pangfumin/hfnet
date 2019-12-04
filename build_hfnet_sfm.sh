@@ -6,7 +6,7 @@
 
 # PART 2: Inference hfnet local features and macth them with sift match prior from Step 1.
 
-#Step2: use exportFeature.ipynb to  export feature,  recorded as .npz
+#Step2: use export_feature.py to  export feature,  recorded as .npz
 #This step will generate superpoint feature. HfNet inference.
 
 #step3: transform .npz feature to .txt format and export them to colmap directory
